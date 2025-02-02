@@ -57,7 +57,9 @@ export default function Home() {
                 <header className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center font-sans">
                     <div className="relative rounded-lg max-w-2xl mx-auto">
                         <h2 className="text-6xl md:text-7xl font-bold">YeezyVerse</h2>
-                        <p className="text-4xl italic md:text-5xl mt-3 max-w-lg bg-gradient-to-t from-blue-400 via-blue-100 to-blue-600 bg-clip-text text-transparent">"I'm a God"</p>
+                        <p className="text-4xl italic md:text-5xl mt-3 max-w-lg bg-gradient-to-t from-blue-400 via-blue-100 to-blue-600 bg-clip-text text-transparent">
+                            &quot;I&apos;m a God&quot;
+                        </p>
                     </div>
                     <div>
                         <p className='mt-20 max-w-lg mx-auto text-lg md:text-xl font-mono'>
