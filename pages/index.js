@@ -126,7 +126,7 @@ export default function Home() {
                     </div>
 
                     {/* Descripción */}
-                    <div className="order-2 md:order-1 w-full bg-gray-500 bg-opacity-10 backdrop-blur p-4 rounded-2xl">
+                    <div className="order-2 md:order-1 w-full bg-gray-500 bg-opacity-10 backdrop-blur p-4 rounded-2xl border-2 border-zinc-800">
                         <p className="text-left">
                             Kanye West (nacido el 8 de junio de 1977 en Atlanta, Georgia) es un rapero, productor musical, diseñador de moda y empresario estadounidense. Reconocido por su innovación en la industria musical, ha sido una figura clave en la evolución del hip-hop y la cultura popular contemporánea.<br /><br />
 
@@ -144,7 +144,7 @@ export default function Home() {
             <section id="discography" className="bg-secondary py-20 px-4 text-white">
                 <h3 className="text-4xl md:text-5xl font-bold font-sans text-center mb-16">Discografía</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-5">
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105 border-2 border-zinc-800">
                         <h4 className="text-xl font-bold mb-4">The College Dropout</h4>
                         <Image src="/tcd-cover.jpg" alt="Kanye West" width={300} height={300} className="w-xl h-auto rounded-2xl place-self-center drop-shadow-xl" />
                         <p className="mt-2">2004 - 21 canciones, 1 h 16 min</p>
@@ -157,7 +157,7 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105 border-2 border-zinc-800">
                         <h4 className="text-xl font-bold mb-4">My Beautiful Dark Twisted Fantasy</h4>
                         <Image src="/mbdtf-cover.jpg" alt="Kanye West" width={300} height={300} className="w-xl h-auto rounded-2xl place-self-center drop-shadow-xl" />
                         <p className="mt-2">2010 - 13 canciones, 1 h 8 min</p>
@@ -170,7 +170,7 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105 border-2 border-zinc-800">
                         <h4 className="text-xl font-bold mb-4">Graduation</h4>
                         <Image src="/graduation-cover.jpg" alt="Kanye West" width={300} height={300} className="w-xl h-auto rounded-2xl place-self-center drop-shadow-xl" />
                         <p className="mt-2">2021 - 14 canciones, 54 min 29 s</p>
@@ -190,19 +190,19 @@ export default function Home() {
             <section id="awards" className="py-20 px-4 bg-primary text-white">
                 <h3 className="text-3xl font-bold text-center mb-10">Premios y reconocimientos</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105 border-2 border-zinc-800">
                         <h4 className="text-xl font-bold mb-2">🏆 21 premios Grammy</h4>
                         <p className="text-gray-300">lo que lo convierte en uno de los artistas más premiados en la historia de los Grammys</p>
                     </div>
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105 border-2 border-zinc-800">
                         <h4 className="text-xl font-bold mb-2">🏆 Mejor Álbum de Rap</h4>
                         <p className="text-gray-300">&quot;The College Dropout&quot; (2005), &quot;Late Registration&quot; (2006), &quot;Graduation&quot; (2008), &quot;My Beautiful Dark Twisted Fantasy&quot; (2012), y &quot;Jesus Is King&quot; (2021).</p>
                     </div>
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105 border-2 border-zinc-800">
                         <h4 className="text-xl font-bold mb-2">🏆 Mejor Canción Rap</h4>
                         <p className="text-gray-300">&quot;Jesus Walks&quot; (2005), &quot;Diamonds from Sierra Leone&quot; (2006), &quot;Good Life&quot; (2008), &quot;All of the Lights&quot; (2012), y &quot;Hurricane&quot; (2022).</p>
                     </div>
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105 border-2 border-zinc-800">
                         <h4 className="text-xl font-bold mb-2">🏆 Mejor Interpretación Rap en Solitario</h4>
                         <p className="text-gray-300">&quot;Gold Digger&quot; (2006) y &quot;Stronger&quot; (2008).</p>
                     </div>
