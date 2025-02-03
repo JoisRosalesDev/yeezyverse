@@ -116,7 +116,7 @@ export default function Home() {
                         {/* Contenedor de la imagen */}
                         <div className="relative rounded-2xl overflow-hidden">
                             <Image
-                                src="/kanye-avatar.png"
+                                src="/kanye-avatar.webp"
                                 alt="Kanye West"
                                 width={300}
                                 height={300}
