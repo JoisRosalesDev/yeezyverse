@@ -98,16 +98,41 @@ export default function Home() {
             </div>
 
             {/* About Section */}
-            <section id="about" className="py-20 px-4 text-white bg-cover bg-center" style={{ backgroundImage: "url('/about-cover.webp')" }}>
-                <h3 className="text-4xl md:text-5xl font-bold font-sans text-center mb-16">Acerca de Kanye West</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center">
-                        <p className="text-justify">
-                            Kanye West (nacido el 8 de junio de 1977 en Atlanta, Georgia) es un rapero, productor musical, diseñador de moda y empresario estadounidense. Reconocido por su innovación en la industria musical, ha sido una figura clave en la evolución del hip-hop y la cultura popular contemporánea.<br />
+            <section id="about" className="py-20 px-6 text-white bg-primary">
+                {/* Título */}
+                <h3 className="text-4xl md:text-5xl font-bold font-sans text-center mb-16">
+                    Acerca de Kanye West
+                </h3>
 
-                            West inició su carrera como productor en la escena de Chicago, ganando reconocimiento a principios de los 2000 por su trabajo con artistas como Jay-Z. En 2004, debutó como solista con The College Dropout, un álbum aclamado por la crítica que lo estableció como un artista versátil y creativo. Con una discografía que incluye proyectos icónicos como Late Registration (2005), Graduation (2007), 808s & Heartbreak (2008) y My Beautiful Dark Twisted Fantasy (2010), West redefinió constantemente los límites del hip-hop, incorporando elementos de soul, electrónica y música experimental.<br />
+                {/* Contenedor para la imagen y la descripción */}
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                    {/* Imagen con sombra de gradiente */}
+                    <div className="order-1 md:order-2 w-full md:w-auto relative">
+                        {/* Sombra de gradiente */}
+                        <div
+                            className="absolute -inset-2 rounded-2xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500 via-blue-700 to-blue-500 opacity-50 blur-2xl"
+                        ></div>
 
-                            Más allá de la música, ha incursionado en la moda con su línea Yeezy, en colaboración con Adidas, revolucionando el mercado de la ropa y el calzado deportivo. También ha generado polémica por sus declaraciones públicas y su incursión en la política, incluyendo su candidatura presidencial en 2020.<br />
+                        {/* Contenedor de la imagen */}
+                        <div className="relative rounded-2xl overflow-hidden">
+                            <Image
+                                src="/kanye-avatar.png"
+                                alt="Kanye West"
+                                width={300}
+                                height={300}
+                                className="w-max h-auto rounded-2xl mx-auto bg-blue-700 border-2 border-blue-800 bg-opacity-80 backdrop-blur"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Descripción */}
+                    <div className="order-2 md:order-1 w-full bg-gray-500 bg-opacity-10 backdrop-blur p-4 rounded-2xl">
+                        <p className="text-left">
+                            Kanye West (nacido el 8 de junio de 1977 en Atlanta, Georgia) es un rapero, productor musical, diseñador de moda y empresario estadounidense. Reconocido por su innovación en la industria musical, ha sido una figura clave en la evolución del hip-hop y la cultura popular contemporánea.<br /><br />
+
+                            West inició su carrera como productor en la escena de Chicago, ganando reconocimiento a principios de los 2000 por su trabajo con artistas como Jay-Z. En 2004, debutó como solista con <em>The College Dropout</em>, un álbum aclamado por la crítica que lo estableció como un artista versátil y creativo. Con una discografía que incluye proyectos icónicos como <em>Late Registration</em> (2005), <em>Graduation</em> (2007), <em>808s & Heartbreak</em> (2008) y <em>My Beautiful Dark Twisted Fantasy</em> (2010), West redefinió constantemente los límites del hip-hop, incorporando elementos de soul, electrónica y música experimental.<br /><br />
+
+                            Más allá de la música, ha incursionado en la moda con su línea Yeezy, en colaboración con Adidas, revolucionando el mercado de la ropa y el calzado deportivo. También ha generado polémica por sus declaraciones públicas y su incursión en la política, incluyendo su candidatura presidencial en 2020.<br /><br />
 
                             Con múltiples premios Grammy y un impacto cultural significativo, Kanye West sigue siendo una de las figuras más influyentes del siglo XXI, dejando una huella tanto en la música como en la moda y el entretenimiento.
                         </p>
@@ -162,18 +187,34 @@ export default function Home() {
             </section>
 
             {/* Premios */}
-            <section id="awards" className="py-60 px-4 bg-primary text-white">
-                <h3 className="text-3xl font-bold text-center">Premios</h3>
-                <ul className="mt-5 space-y-3 text-center">
-                    <li>🏆 Grammy al Mejor Álbum de Rap (2005)</li>
-                    <li>🏆 Grammy al Mejor Álbum de Rap (2012)</li>
-                    <li>🏆 MTV Video Music Award (2016)</li>
-                </ul>
+            <section id="awards" className="py-20 px-4 bg-primary text-white">
+                <h3 className="text-3xl font-bold text-center mb-10">Premios y reconocimientos</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                        <h4 className="text-xl font-bold mb-2">🏆 21 premios Grammy</h4>
+                        <p className="text-gray-300">lo que lo convierte en uno de los artistas más premiados en la historia de los Grammys</p>
+                    </div>
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                        <h4 className="text-xl font-bold mb-2">🏆 Mejor Álbum de Rap</h4>
+                        <p className="text-gray-300">&quot;The College Dropout&quot; (2005), &quot;Late Registration&quot; (2006), &quot;Graduation&quot; (2008), &quot;My Beautiful Dark Twisted Fantasy&quot; (2012), y &quot;Jesus Is King&quot; (2021).</p>
+                    </div>
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                        <h4 className="text-xl font-bold mb-2">🏆 Mejor Canción Rap</h4>
+                        <p className="text-gray-300">&quot;Jesus Walks&quot; (2005), &quot;Diamonds from Sierra Leone&quot; (2006), &quot;Good Life&quot; (2008), &quot;All of the Lights&quot; (2012), y &quot;Hurricane&quot; (2022).</p>
+                    </div>
+                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-6 rounded-2xl text-center shadow-md transition-transform transform hover:scale-105">
+                        <h4 className="text-xl font-bold mb-2">🏆 Mejor Interpretación Rap en Solitario</h4>
+                        <p className="text-gray-300">&quot;Gold Digger&quot; (2006) y &quot;Stronger&quot; (2008).</p>
+                    </div>
+                </div>
             </section>
 
             {/* Footer */}
-            <footer className="p-5 text-center bg-gray-200 text-gray-700 border-t border-gray-300">
-                © 2025 YeezyVerse | Proyecto de aprendizaje con Next.js
+            <footer className="p-10 text-center bg-blue-700">
+                <div>
+                    <p className="">Desarrollado por Jois Rosales</p>
+                    <p className="text-sm">© 2025 YeezyVerse. Todos los derechos reservados.</p>
+                </div>
             </footer>
         </div>
     );
