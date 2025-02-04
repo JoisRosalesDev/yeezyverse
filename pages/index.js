@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-const TypingText = ({ text, speed = 50 }) => {
+const TypingText = ({ text, speed = 30 }) => {
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
 
@@ -36,7 +36,7 @@ export default function Home() {
             </Head>
 
             {/* Hero Container */}
-            <div className="relative h-screen bg-hero flex flex-col">
+            <div className="relative bg-hero flex flex-col">
                 {/* Navbar */}
                 <nav className="fixed top-0 left-0 w-full bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 z-50">
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -64,11 +64,11 @@ export default function Home() {
                 </nav>
 
                 {/* Hero Section */}
-                <header className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 md:px-20 flex-grow max-w-screen-xl mx-auto w-full h-full pt-32 md:pt-40 lg:pt-4">
+                <header className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 md:px-6 flex-grow mx-auto pt-32 md:pt-32 lg:pt-32">
                     {/* Texto del Hero */}
                     <div className="w-full md:w-1/2 space-y-6">
-                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">YeezyVerse</h2>
-                        <p className="text-2xl sm:text-3xl md:text-4xl font-satisfy italic bg-gradient-to-t from-blue-400 via-blue-100 to-blue-600 bg-clip-text text-transparent">
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">YeezyVerse</h2>
+                        <p className="text-4xl md:text-5xl lg:text-6xl font-satisfy italic bg-gradient-to-t from-blue-400 via-blue-100 to-blue-600 bg-clip-text text-transparent">
                             &quot;I&apos;m a God&quot;
                         </p>
                         <p className="text-lg sm:text-xl md:text-2xl max-w-lg mx-auto md:mx-0">
@@ -77,7 +77,7 @@ export default function Home() {
                     </div>
 
                     {/* Imagen */}
-                    <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-16 lg:mt-4">
+                    <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-6 lg:mt-4">
                         <Image
                             src="/kanye-cover2.jpg"
                             alt="Kanye West"
@@ -85,11 +85,12 @@ export default function Home() {
                             height={450}
                             className="rounded-full"
                             style={{
-                                maskImage: "radial-gradient(black, transparent, black 140%)",
+                                maskImage: "radial-gradient(#0f0f12, transparent, #0f0f12 140%)",
                             }}
                         />
                     </div>
                 </header>
+
             </div>
 
             {/* About Section */}
@@ -99,38 +100,41 @@ export default function Home() {
                     Acerca de Kanye West
                 </h3>
 
-                {/* Contenedor para la imagen y la descripción */}
+                {/* Contenedor para la imagen y las cards de información */}
                 <div className="flex flex-col md:flex-row items-center gap-8">
                     {/* Imagen con sombra de gradiente */}
-                    <div className="order-1 md:order-2 w-full md:w-auto relative">
-                        {/* Sombra de gradiente */}
-                        <div
-                            className="absolute -inset-2 rounded-2xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500 via-blue-700 to-blue-500 opacity-50 blur-2xl"
-                        ></div>
-
-                        {/* Contenedor de la imagen */}
-                        <div className="relative rounded-2xl overflow-hidden">
-                            <Image
-                                src="/kanye-avatar.webp"
-                                alt="Kanye West"
-                                width={300}
-                                height={300}
-                                className="w-max h-auto rounded-2xl mx-auto bg-blue-700 border-2 border-blue-800 bg-opacity-80 backdrop-blur"
-                            />
-                        </div>
+                    <div className="order-1 w-full md:w-auto relative rounded-2xl overflow-hidden shadow-[0px_0px_10px_5px_#76606a]">
+                        <Image
+                            src="/kanye-grammy.webp"
+                            alt="Kanye West"
+                            width={300}
+                            height={300}
+                            className="w-full md:w-auto h-auto rounded-2xl mx-auto bg-opacity-80 backdrop-blur"
+                        />
                     </div>
 
-                    {/* Descripción */}
-                    <div className="order-2 md:order-1 w-full bg-gray-500 bg-opacity-10 backdrop-blur p-4 rounded-2xl border-2 border-zinc-800">
-                        <p className="text-left">
-                            Kanye West (nacido el 8 de junio de 1977 en Atlanta, Georgia) es un rapero, productor musical, diseñador de moda y empresario estadounidense. Reconocido por su innovación en la industria musical, ha sido una figura clave en la evolución del hip-hop y la cultura popular contemporánea.<br /><br />
-
-                            West inició su carrera como productor en la escena de Chicago, ganando reconocimiento a principios de los 2000 por su trabajo con artistas como Jay-Z. En 2004, debutó como solista con <em>The College Dropout</em>, un álbum aclamado por la crítica que lo estableció como un artista versátil y creativo. Con una discografía que incluye proyectos icónicos como <em>Late Registration</em> (2005), <em>Graduation</em> (2007), <em>808s & Heartbreak</em> (2008) y <em>My Beautiful Dark Twisted Fantasy</em> (2010), West redefinió constantemente los límites del hip-hop, incorporando elementos de soul, electrónica y música experimental.<br /><br />
-
-                            Más allá de la música, ha incursionado en la moda con su línea Yeezy, en colaboración con Adidas, revolucionando el mercado de la ropa y el calzado deportivo. También ha generado polémica por sus declaraciones públicas y su incursión en la política, incluyendo su candidatura presidencial en 2020.<br /><br />
-
-                            Con múltiples premios Grammy y un impacto cultural significativo, Kanye West sigue siendo una de las figuras más influyentes del siglo XXI, dejando una huella tanto en la música como en la moda y el entretenimiento.
-                        </p>
+                    {/* Cards con información */}
+                    <div className="order-2 w-full flex flex-col space-y-6">
+                        <div className="bg-gray-500 bg-opacity-10 backdrop-blur p-6 rounded-2xl border border-zinc-800">
+                            <p className="text-left">
+                                Kanye West (nacido el 8 de junio de 1977 en Atlanta, Georgia) es un rapero, productor musical, diseñador de moda y empresario estadounidense. Reconocido por su innovación en la industria musical, ha sido una figura clave en la evolución del hip-hop y la cultura popular contemporánea.
+                            </p>
+                        </div>
+                        <div className="bg-gray-500 bg-opacity-10 backdrop-blur p-6 rounded-2xl border border-zinc-800">
+                            <p className="text-left">
+                                West inició su carrera como productor en la escena de Chicago, ganando reconocimiento a principios de los 2000 por su trabajo con artistas como Jay-Z. En 2004, debutó como solista con <em>The College Dropout</em>, un álbum aclamado por la crítica que lo estableció como un artista versátil y creativo.
+                            </p>
+                        </div>
+                        <div className="bg-gray-500 bg-opacity-10 backdrop-blur p-6 rounded-2xl border border-zinc-800">
+                            <p className="text-left">
+                                Más allá de la música, ha incursionado en la moda con su línea Yeezy, en colaboración con Adidas, revolucionando el mercado de la ropa y el calzado deportivo. También ha generado polémica por sus declaraciones públicas y su incursión en la política, incluyendo su candidatura presidencial en 2020.
+                            </p>
+                        </div>
+                        <div className="bg-gray-500 bg-opacity-10 backdrop-blur p-6 rounded-2xl border border-zinc-800">
+                            <p className="text-left">
+                                Con múltiples premios Grammy y un impacto cultural significativo, Kanye West sigue siendo una de las figuras más influyentes del siglo XXI, dejando una huella tanto en la música como en la moda y el entretenimiento.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
