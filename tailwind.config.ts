@@ -5,7 +5,7 @@ module.exports = {
       backgroundImage: {
         'primary': 'linear-gradient(to top, #27272a, #18181b, #0f0f12);',
         'secondary': 'linear-gradient(to bottom, #27272a, #18181b, #0f0f12);',
-        'hero': 'linear-gradient(to top, #0f0f12, #18181b, #1d4ed8);',
+        'hero': 'radial-gradient(ellipse at top left, #1d4ed8, #0f0f12, #0f0f12);',
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],

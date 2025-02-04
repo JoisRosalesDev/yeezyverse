@@ -36,7 +36,7 @@ export default function Home() {
             </Head>
 
             {/* Hero Container */}
-            <div className="relative h-[80vh] bg-hero">
+            <div className="relative h-screen bg-hero flex flex-col">
                 {/* Navbar */}
                 <nav className="fixed top-0 left-0 w-full bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 z-50">
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -49,50 +49,45 @@ export default function Home() {
                             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-900"
                         >
                             <span className="sr-only">Open main menu</span>
-                            <svg
-                                className="w-5 h-5"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 17 14"
-                            >
-                                <path
-                                    stroke="currentColor"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M1 1h15M1 7h15M1 13h15"
-                                />
+                            <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                             </svg>
                         </button>
                         <div className={`${menuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-                            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-blue-900 rounded-lg bg-blue-800 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent text-white">
-                                <li>
-                                    <a href="#" className="block py-2 px-3 hover:text-gray-300">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#discography" className="block py-2 px-3 hover:text-gray-300">Discografía</a>
-                                </li>
-                                <li>
-                                    <a href="#awards" className="block py-2 px-3 hover:text-gray-300">Premios</a>
-                                </li>
+                            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent text-white">
+                                <li><a href="#" className="block py-2 px-3 hover:text-gray-300">Home</a></li>
+                                <li><a href="#discography" className="block py-2 px-3 hover:text-gray-300">Discografía</a></li>
+                                <li><a href="#awards" className="block py-2 px-3 hover:text-gray-300">Premios</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
 
                 {/* Hero Section */}
-                <header className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center font-sans">
-                    <div className="relative rounded-lg max-w-2xl mx-auto">
-                        <h2 className="text-6xl md:text-7xl font-bold">YeezyVerse</h2>
-                        <p className="text-5xl md:text-6xl font-satisfy italic  mt-3 max-w-lg bg-gradient-to-t from-blue-400 via-blue-100 to-blue-600 bg-clip-text text-transparent">
+                <header className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 md:px-20 flex-grow max-w-screen-xl mx-auto w-full h-full pt-32 md:pt-40 lg:pt-4">
+                    {/* Texto del Hero */}
+                    <div className="w-full md:w-1/2 space-y-6">
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">YeezyVerse</h2>
+                        <p className="text-2xl sm:text-3xl md:text-4xl font-satisfy italic bg-gradient-to-t from-blue-400 via-blue-100 to-blue-600 bg-clip-text text-transparent">
                             &quot;I&apos;m a God&quot;
                         </p>
-                    </div>
-                    <div>
-                        <p className="mt-10 max-w-lg mx-auto text-xl md:text-2xl">
+                        <p className="text-lg sm:text-xl md:text-2xl max-w-lg mx-auto md:mx-0">
                             <TypingText text="No es solo hip-hop, no es solo moda. Es una revolución creativa." />
                         </p>
+                    </div>
+
+                    {/* Imagen */}
+                    <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-16 lg:mt-4">
+                        <Image
+                            src="/kanye-cover2.jpg"
+                            alt="Kanye West"
+                            width={450}
+                            height={450}
+                            className="rounded-full"
+                            style={{
+                                maskImage: "radial-gradient(black, transparent, black 140%)",
+                            }}
+                        />
                     </div>
                 </header>
             </div>
