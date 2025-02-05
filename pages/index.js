@@ -1,6 +1,9 @@
+"use client";
+
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
 const TypingText = ({ text, speed = 30 }) => {
     const [displayedText, setDisplayedText] = useState("");
@@ -27,12 +30,6 @@ export default function Home() {
             <Head>
                 <title>YeezyVerse</title>
                 <meta name="description" content="Trayectoria, discografía y premios de Kanye West" />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap"
-                    rel="stylesheet"
-                />
             </Head>
 
             {/* Hero Container */}
@@ -141,47 +138,96 @@ export default function Home() {
 
             {/* Discografía */}
             <section id="discography" className="bg-secondary py-20 px-4 text-white">
-                <h3 className="text-4xl md:text-5xl font-bold font-sans text-center mb-16">Discografía</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-5">
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105 border-2 border-zinc-800">
-                        <h4 className="text-xl font-bold mb-4">The College Dropout</h4>
-                        <Image src="/tcd-cover.jpg" alt="Kanye West" width={300} height={300} className="w-xl h-auto rounded-2xl place-self-center drop-shadow-xl" />
-                        <p className="mt-2">2004 - 21 canciones, 1 h 16 min</p>
-                        <div className="flex justify-center gap-3 mt-3">
-                            <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg transition hover:from-green-600 hover:to-green-500">
-                                <a href="#">Spotify</a>
-                            </button>
-                            <button className="bg-gradient-to-r from-rose-500 to-rose-600 text-white px-4 py-2 rounded-lg hover:from-rose-600 hover:to-rose-500 transition">
-                                <a href="#">Apple Music</a>
-                            </button>
-                        </div>
-                    </div>
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105 border-2 border-zinc-800">
-                        <h4 className="text-xl font-bold mb-4">My Beautiful Dark Twisted Fantasy</h4>
-                        <Image src="/mbdtf-cover.jpg" alt="Kanye West" width={300} height={300} className="w-xl h-auto rounded-2xl place-self-center drop-shadow-xl" />
-                        <p className="mt-2">2010 - 13 canciones, 1 h 8 min</p>
-                        <div className="flex justify-center gap-3 mt-3">
-                            <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg transition hover:from-green-600 hover:to-green-500">
-                                <a href="#">Spotify</a>
-                            </button>
-                            <button className="bg-gradient-to-r from-rose-500 to-rose-600 text-white px-4 py-2 rounded-lg hover:from-rose-600 hover:to-rose-500 transition">
-                                <a href="#">Apple Music</a>
-                            </button>
-                        </div>
-                    </div>
-                    <div className="bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center transition-transform transform hover:scale-105 border-2 border-zinc-800">
-                        <h4 className="text-xl font-bold mb-4">Graduation</h4>
-                        <Image src="/graduation-cover.jpg" alt="Kanye West" width={300} height={300} className="w-xl h-auto rounded-2xl place-self-center drop-shadow-xl" />
-                        <p className="mt-2">2021 - 14 canciones, 54 min 29 s</p>
-                        <div className="flex justify-center gap-3 mt-3">
-                            <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg transition hover:from-green-600 hover:to-green-500">
-                                <a href="#">Spotify</a>
-                            </button>
-                            <button className="bg-gradient-to-r from-rose-500 to-rose-600 text-white px-4 py-2 rounded-lg hover:from-rose-600 hover:to-rose-500 transition">
-                                <a href="#">Apple Music</a>
-                            </button>
-                        </div>
-                    </div>
+                <h3 className="text-4xl md:text-5xl font-bold text-center mb-16">
+                    Discografía
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                    {/* Card - The College Dropout */}
+                    <CardContainer className="inter-var w-full flex justify-center">
+                        <CardBody className="w-full max-w-[20rem] h-full flex flex-col items-center justify-center bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center border border-zinc-800 shadow-md">
+                            <CardItem translateZ={50} className="text-xl font-bold mb-2">
+                                The College Dropout
+                            </CardItem>
+                            <CardItem translateZ={100} rotateX={20} rotateZ={-10} className="flex justify-center">
+                                <Image
+                                    src="/tcd-cover.jpg"
+                                    alt="Kanye West"
+                                    width={300}
+                                    height={300}
+                                    className="w-[300px] h-auto rounded-2xl drop-shadow-xl"
+                                />
+                            </CardItem>
+                            <CardItem as="p" translateZ={60} className="text-gray-300 mt-3 text-sm">
+                                2004 - 21 canciones, 1 h 16 min
+                            </CardItem>
+                            <div className="flex justify-center gap-2 w-full mt-4">
+                                <button className="px-4 py-2 w-28 rounded-lg bg-green-600 text-white hover:bg-green-500 text-sm">
+                                    <a href="#">Spotify</a>
+                                </button>
+                                <button className="px-4 py-2 w-28 rounded-lg bg-rose-600 text-white hover:bg-rose-500 text-sm">
+                                    <a href="#">Apple Music</a>
+                                </button>
+                            </div>
+                        </CardBody>
+                    </CardContainer>
+
+                    {/* Card - My Beautiful Dark Twisted Fantasy */}
+                    <CardContainer className="inter-var w-full flex justify-center">
+                        <CardBody className="w-full max-w-[20rem] h-full flex flex-col items-center justify-center bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center border border-zinc-800 shadow-md">
+                            <CardItem translateZ={50} className="text-xl font-bold mb-2">
+                                My Beautiful Dark Twisted Fantasy
+                            </CardItem>
+                            <CardItem translateZ={100} rotateX={20} rotateZ={-10} className="flex justify-center">
+                                <Image
+                                    src="/mbdtf-cover.jpg"
+                                    alt="Kanye West"
+                                    width={300}
+                                    height={300}
+                                    className="w-[300px] h-auto rounded-2xl drop-shadow-xl"
+                                />
+                            </CardItem>
+                            <CardItem as="p" translateZ={60} className="text-gray-300 mt-3 text-sm">
+                                2010 - 13 canciones, 1 h 8 min
+                            </CardItem>
+                            <div className="flex justify-center gap-2 w-full mt-4">
+                                <button className="px-4 py-2 w-28 rounded-lg bg-green-600 text-white hover:bg-green-500 text-sm">
+                                    <a href="#">Spotify</a>
+                                </button>
+                                <button className="px-4 py-2 w-28 rounded-lg bg-rose-600 text-white hover:bg-rose-500 text-sm">
+                                    <a href="#">Apple Music</a>
+                                </button>
+                            </div>
+                        </CardBody>
+                    </CardContainer>
+
+                    {/* Card - Graduation */}
+                    <CardContainer className="inter-var w-full flex justify-center">
+                        <CardBody className="w-full max-w-[20rem] h-full flex flex-col items-center justify-center bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 p-4 rounded-2xl text-center border border-zinc-800 shadow-md">
+                            <CardItem translateZ={50} className="text-xl font-bold mb-2">
+                                Graduation
+                            </CardItem>
+                            <CardItem translateZ={100} rotateX={20} rotateZ={-10} className="flex justify-center">
+                                <Image
+                                    src="/graduation-cover.jpg"
+                                    alt="Kanye West"
+                                    width={300}
+                                    height={300}
+                                    className="w-[300px] h-auto rounded-2xl drop-shadow-xl"
+                                />
+                            </CardItem>
+                            <CardItem as="p" translateZ={60} className="text-gray-300 mt-3 text-sm">
+                                2021 - 14 canciones, 54 min 29 s
+                            </CardItem>
+                            <div className="flex justify-center gap-2 w-full mt-4">
+                                <button className="px-4 py-2 w-28 rounded-lg bg-green-600 text-white hover:bg-green-500 text-sm">
+                                    <a href="#">Spotify</a>
+                                </button>
+                                <button className="px-4 py-2 w-28 rounded-lg bg-rose-600 text-white hover:bg-rose-500 text-sm">
+                                    <a href="#">Apple Music</a>
+                                </button>
+                            </div>
+                        </CardBody>
+                    </CardContainer>
                 </div>
             </section>
 
