@@ -6,7 +6,11 @@ export default function Document() {
             <Head>
                 {/* Agrega aquí las fuentes personalizadas */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossOrigin="anonymous" // Cambiado de "true" a "anonymous"
+                />
                 <link
                     href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap"
                     rel="stylesheet"
