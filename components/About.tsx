@@ -77,11 +77,14 @@ const aboutData = [
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="py-10 sm:py-16 lg:py-20 px-8 sm:px-8 lg:px-16 text-white bg-primary">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
-                Acerca de Kanye West
+        <section id="about" className="py-16 px-6 sm:px-12 lg:px-20 bg-white text-black">
+            {/* Título */}
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
+            La Vida y Obra de Kanye West
             </h3>
-            <div className="max-w-4xl mx-auto">
+
+            {/* Carrusel de Testimonios */}
+            <div className="max-w-5xl mx-auto">
                 <AnimatedTestimonials testimonials={aboutData} />
             </div>
         </section>

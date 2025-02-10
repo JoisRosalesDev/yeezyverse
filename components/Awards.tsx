@@ -28,28 +28,30 @@ const awards = [
 
 const Awards: React.FC = () => {
     return (
-        <section id="awards" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-16 bg-primary text-white">
+        <section id="awards" className="bg-white py-16 px-6 sm:px-12 lg:px-20 text-black">
             {/* Título */}
             <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }}
-                className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
             >
-                Premios y reconocimientos
+                Premios y Reconocimientos
             </motion.h3>
 
-            {/* Contenedor de premios */}
-            <InfiniteMovingCards
-                items={awards.map((award) => ({
-                    quote: award.description,
-                    name: award.title,
-                    title: "",
-                }))}
-                direction="right"
-                speed="slow"
-                pauseOnHover={true}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
-            />
+            {/* Contenedor de premios con Infinite Moving Cards */}
+            <div className="relative">
+                <InfiniteMovingCards
+                    items={awards.map((award) => ({
+                        quote: award.description,
+                        name: award.title,
+                        title: "",
+                    }))}
+                    direction="right"
+                    speed="slow"
+                    pauseOnHover={true}
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                />
+            </div>
         </section>
     );
 };

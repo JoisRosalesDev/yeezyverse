@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Discography from "@/components/Discography";
 import Awards from "@/components/Awards";
+import Phrases from "@/components/Phrases";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -33,6 +34,8 @@ export default function Home() {
 
             {/* Premios */}
             <Awards />
+
+            <Phrases/>
 
             {/* Footer */}
             <Footer />
