@@ -13,7 +13,7 @@ const fadeIn = {
 
 const Hero: React.FC = () => {
     return (
-        <header
+        <header id="hero"
             className="relative flex items-center justify-center text-center h-screen bg-cover bg-center"
             style={{ backgroundImage: "url('/kanye-hero.webp')" }}
         >
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
                 variants={fadeIn}
                 initial="hidden"
                 animate="visible"
-                className="w-full max-w-4xl px-2 md:px-10 mix-blend-difference"
+                className="w-full max-w-4xl px-10 md:px-10 mix-blend-difference drop-shadow-md"
             >
                 <h1 className="text-6xl md:text-8xl font-bold text-white drop-shadow-lg">
                     YeezyVerse

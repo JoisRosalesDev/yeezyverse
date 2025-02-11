@@ -28,14 +28,14 @@ const awards = [
 
 const Awards: React.FC = () => {
     return (
-        <section id="awards" className="bg-white py-16 px-6 sm:px-12 lg:px-20 text-black">
+        <section id="awards" className="bg-white py-40 px-10 sm:px-12 lg:px-20 text-black">
             {/* Título */}
             <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }}
-                className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12"
             >
-                Premios y Reconocimientos
+                Premios de Kanye
             </motion.h3>
 
             {/* Contenedor de premios con Infinite Moving Cards */}

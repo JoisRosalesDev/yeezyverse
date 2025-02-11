@@ -37,16 +37,16 @@ const fadeIn = {
 
 const Discography: React.FC = () => {
     return (
-        <section id="discography" className="bg-white py-16 px-6 sm:px-12 lg:px-20 text-black">
+        <section id="discography" className="bg-white py-40 px-10 sm:px-12 lg:px-20 text-black">
             {/* Título */}
             <motion.h3
                 variants={fadeIn}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12"
             >
-                Los Álbumes que Definen una Era
+                La Obra de Kanye
             </motion.h3>
 
             {/* Contenedor de Cards */}
@@ -60,7 +60,7 @@ const Discography: React.FC = () => {
                         viewport={{ once: true }}
                     >
                         <CardContainer className="inter-var w-full flex justify-center">
-                            <CardBody className="w-full max-w-[22rem] h-auto flex flex-col items-center justify-center bg-gray-100 p-6 rounded-2xl text-center border border-gray-300 shadow-md overflow-hidden">
+                            <CardBody className="w-full max-w-[22rem] h-auto flex flex-col items-center justify-center border border-gray-300 bg-white shadow-lg p-6 rounded-2xl overflow-hidden text-center">
                                 {/* Título del álbum */}
                                 <CardItem translateZ={50} className="text-xl sm:text-2xl font-bold mb-3">
                                     {album.title}
@@ -73,12 +73,12 @@ const Discography: React.FC = () => {
                                         alt={album.title}
                                         width={280}
                                         height={280}
-                                        className="w-full h-auto rounded-xl shadow-lg"
+                                        className="w-full h-auto rounded-2xl shadow-md"
                                     />
                                 </CardItem>
 
                                 {/* Año y detalles del álbum */}
-                                <CardItem as="p" translateZ={60} className="text-gray-600 mt-4 text-sm sm:text-base">
+                                <CardItem as="p" translateZ={60} className="text-gray-600 mt-4 text-sm sm:text-base font-serif italic">
                                     {album.year}
                                 </CardItem>
 

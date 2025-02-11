@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 z-50">
+        <nav className="fixed top-0 left-0 w-full bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 z-50 mix-blend-difference">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="#" className="flex items-center space-x-3">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap">
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-900"
+                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-600"
                 >
                     <span className="sr-only">Open main menu</span>
                     <svg
@@ -42,18 +42,28 @@ const Navbar: React.FC = () => {
                 <div className={`${menuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}>
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent text-white">
                         <li>
-                            <Link href="#" className="block py-2 px-3 hover:text-gray-300">
+                            <Link href="#hero" className="block py-2 px-3 hover:text-zinc-500">
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link href="#discography" className="block py-2 px-3 hover:text-gray-300">
+                            <Link href="#about" className="block py-2 px-3 hover:text-zinc-500">
+                                Acerca de
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#discography" className="block py-2 px-3 hover:text-zinc-500">
                                 Discografía
                             </Link>
                         </li>
                         <li>
-                            <Link href="#awards" className="block py-2 px-3 hover:text-gray-300">
+                            <Link href="#awards" className="block py-2 px-3 hover:text-zinc-500">
                                 Premios
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#phrases" className="block py-2 px-3 hover:text-zinc-500">
+                                Frase
                             </Link>
                         </li>
                     </ul>

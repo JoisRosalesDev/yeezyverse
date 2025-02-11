@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="py-8 sm:py-10 lg:py-12 px-4 sm:px-8 lg:px-16 text-center bg-secondary text-white"
+      className="py-8 sm:py-10 lg:py-12 px-4 sm:px-8 lg:px-16 text-center bg-black text-white"
     >
       <div>
         <p className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3">

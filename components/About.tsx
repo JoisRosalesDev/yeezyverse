@@ -77,10 +77,10 @@ const aboutData = [
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="py-16 px-6 sm:px-12 lg:px-20 bg-white text-black">
+        <section id="about" className="py-40 px-10 sm:px-12 lg:px-20 bg-white text-black">
             {/* Título */}
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
-            La Vida y Obra de Kanye West
+                El Mundo de Kanye
             </h3>
 
             {/* Carrusel de Testimonios */}
